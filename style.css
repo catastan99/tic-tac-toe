@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.flex-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.flex-container .players-name {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-container .players-name .player {
+    font-size: 20px;
+    height: 20px;
+}
+
+.flex-container .players-name .mid-text {
+    margin: 0 10px;
+    height: 20px;
+    font-size: 15px;
+    line-height: 30px;
+
+}
+
+.flex-container .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 400px;
+    height: 400px;
+    gap: 5px;
+    background-color: rgb(5, 46, 53);
+    border: 1px solid rgb(5, 46, 53);
+}
+
+.flex-container .grid-container p {
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 30px;
+}
+
+.flex-container #winner {
+    margin-top: 20px;
+    color: green;
+    font-size: 30px;
+    height: 30px;
+}
+
+
+.modal {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 67, 77, 0.966);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    animation: entry .8s;
+}
+
+.modal .modal-wrapper {
+    text-align: center;
+}
+
+
+
+.modal .modal-wrapper .title {
+
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.modal .modal-wrapper .player-name label {
+    margin-right: 15px;
+
+}
+
+.modal .modal-wrapper .player-name input {
+    padding: 5px;
+    outline: none;
+}
+
+.modal .modal-wrapper .player-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.modal .modal-wrapper button {
+    padding: 5px 20px;
+    margin-top: 50px;
+    border: none;
+    outline: none;
+    font-family: 'Permanent Marker', cursive;
+    transition: all .5s;
+}
+
+.modal .modal-wrapper button:hover {
+    background-color: green;
+    color: #fff;
+}
+
+@keyframes exit {
+    to {
+        left: -150%;
+    }
+}
+
+@keyframes entry {
+    from {
+        top: -120%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .flex-container .grid-container {
+        max-width: 300px;
+        max-height: 300px;
+    }
+}

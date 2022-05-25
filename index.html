@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tic Tac Toe">
+    <meta name="keywords" content="Tic, Tac, Toe, X, si, 0">
+    <meta name="author" content="Catalin Stan">
+
+    <title>TicTacToe</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="players-name">
+            <p class="player" id="player1"></p>
+            <p class="mid-text">vs</p>
+            <p class="player" id="player2"></p>
+        </div>
+        <div class="grid-container">
+            <p class="cell" cell-number="0"></p>
+            <p class="cell" cell-number="1"></p>
+            <p class="cell" cell-number="2"></p>
+            <p class="cell" cell-number="3"></p>
+            <p class="cell" cell-number="4"></p>
+            <p class="cell" cell-number="5"></p>
+            <p class="cell" cell-number="6"></p>
+            <p class="cell" cell-number="7"></p>
+            <p class="cell" cell-number="8"></p>
+        </div>
+        <p id="winner"></p>
+    </div>
+
+
+    <div class="modal" id="modal">
+        <div class="modal-wrapper">
+            <p class="title">TicTacToe</p>
+            <div class="player-name">
+                <label for="name">X - Player 1: </label>
+                <input type="text" name="player1" id="player1-input" title="Complete your name">
+            </div>
+            <div class="player-name">
+                <label for="name">0 - Player 2: </label>
+                <input type="text" name="player1" id="player2-input" title="Complete your name">
+            </div>
+            <button id="play-button">PLAY</button>
+            <p></p>
+        </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
